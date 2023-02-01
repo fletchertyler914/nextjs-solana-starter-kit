@@ -74,6 +74,7 @@ const Home: NextPage = () => {
           let { txSignature } = await fetcher<TxSendData>("/api/tx/send", {
             method: "POST",
             body: JSON.stringify({ signedTx: signedTxBase64 }),
+
             headers: { "Content-type": "application/json; charset=UTF-8" },
           });
 
